@@ -15,15 +15,12 @@ Please use this program well
  - And create your Discord Bot!
 
 - Installation
-  
-  - git clone https://github.com/progamergiuseppe/Discord-Bot.git
-
-  - cd progamergiuseppe/
-  
    # Windows
   - pip install discord.py
 
   - pip install discord 
+
+  - git clone https://github.com/progamergiuseppe/Discord-Bot.git
 
   - cd Discord-Bot/
 
