@@ -25,6 +25,8 @@ Please use this program well
 
   - pip install discord 
 
+  - cd Discord-Bot/
+
   - python discord_bot.py
 
   # Linux/macOS
@@ -37,6 +39,8 @@ Please use this program well
   - python3 -m pip install -U "discord.py[voice]"
 
   - git clone https://github.com/progamergiuseppe/Discord-Bot.git
+
+  - cd Discord-Bot/
 
   - python discord_bot.py
 
