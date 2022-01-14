@@ -21,7 +21,7 @@ os.system('cls')
 user_discord_name = input('Enter discord name bot : ')
 print('\rReading Token ...')
 time.sleep(1.5)
-TOKEN = "OTMwMDc3ODY3NjU0NjcyNDA0.Ydwogw.7cU9qTLaSILthx8GLDDrRyUAXUE"
+TOKEN = "YOUR TOKEN" # Token for discord_bot
 print(f'\rTOKEN : {TOKEN}')
 
 time.sleep(1.0)
