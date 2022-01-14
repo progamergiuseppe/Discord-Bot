@@ -18,7 +18,7 @@ import youtube_dl
 from discord.ext.commands import Bot
 from youtube_dl import YoutubeDL
 os.system('cls')
-TOKEN_USER = input('Enter Your Discord Bot Token : ')
+TOKEN_USER = input('Enter Your Discord Bot Token : ') #you get a token if you create a bot on the discord developer page
 user_discord_name = input('\rEnter discord name bot : ')
 print('\rReading Token ...')
 time.sleep(1.5)
@@ -242,4 +242,4 @@ async def message_id(ctx):
     '''
     await ctx.send_message(message_id)
 
-bot.run(TOKEN)
+bot.run(TOKEN) #you get a token if you create a bot on the discord developer page
