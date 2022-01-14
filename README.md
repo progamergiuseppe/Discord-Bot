@@ -12,10 +12,20 @@ Please use this program well
 
 - Prepare Discord Bot
 
-Go to : https://discord.com/developers
+ - Go to : https://discord.com/developers
 
-Create your Discord Bot!
+ - And create your Discord Bot!
 
 - Installation
   
-  - git clone
+  - git clone https://github.com/progamergiuseppe/progamergiuseppe.git
+
+  - cd progamergiuseppe/
+
+  - pip install -r requirements.txt
+
+  - python discord_bot.py
+
+Done!
+
+Enjoy your bot!
