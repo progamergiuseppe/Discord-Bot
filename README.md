@@ -19,17 +19,29 @@ Please use this program well
   - git clone https://github.com/progamergiuseppe/progamergiuseppe.git
 
   - cd progamergiuseppe/
-
+  
+   # Windows
   - pip install discord.py
 
   - pip install discord
 
-  - pip install functools
-
-  - pip install itertools
+  - py -3 -m pip install -U discord.py[voice]
 
   - python discord_bot.py
+
+  # Linux/macOS
+  - apt update && apt upgrade
+   
+  - apt-get install python
+  
+  - python3 -m pip install -U discord.py
+  
+  - python3 -m pip install -U "discord.py[voice]"
+
+  - git clone https://github.com/progamergiuseppe/progamergiuseppe.git
 
 Done!
 
 Enjoy your bot!
+
+Created by @Giuseppe
