@@ -23,9 +23,7 @@ Please use this program well
    # Windows
   - pip install discord.py
 
-  - pip install discord
-
-  - py -3 -m pip install -U discord.py[voice]
+  - pip install discord 
 
   - python discord_bot.py
 
