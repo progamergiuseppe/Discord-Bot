@@ -18,10 +18,11 @@ import youtube_dl
 from discord.ext.commands import Bot
 from youtube_dl import YoutubeDL
 os.system('cls')
-user_discord_name = input('Enter discord name bot : ')
+TOKEN_USER = input('Enter Your Discord Bot Token : ')
+user_discord_name = input('\rEnter discord name bot : ')
 print('\rReading Token ...')
 time.sleep(1.5)
-TOKEN = "YOUR TOKEN" # Token for discord_bot
+TOKEN = TOKEN_USER # Token for discord_bot
 print(f'\rTOKEN : {TOKEN}')
 
 time.sleep(1.0)
