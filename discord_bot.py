@@ -9,6 +9,8 @@ import random
 import asyncio
 import itertools
 import sys
+from discord_components import Button, ButtonStyle
+from math import *
 import asyncio
 import traceback
 import time
@@ -17,33 +19,114 @@ from functools import partial
 import youtube_dl
 from discord.ext.commands import Bot
 from youtube_dl import YoutubeDL
+import colorama
+from colorama import Fore
+from msvcrt import getch
+
 os.system('cls')
-TOKEN_USER = input('Enter Your Discord Bot Token : ') #you get a token if you create a bot on the discord developer page
-user_discord_name = input('\rEnter discord name bot : ')
+user_discord_name = input(f'\r{Fore.RESET}Enter discord name bot {Fore.LIGHTBLUE_EX}>> {Fore.LIGHTYELLOW_EX}')
+print("")
+while user_discord_name == '':
+    os.system('cls')
+    print(f'{Fore.LIGHTRED_EX}Name Is Invalid, Please try again!')
+    print("")
+    user_discord_name = input(f'\r{Fore.RESET}Enter discord name bot {Fore.LIGHTBLUE_EX}>> {Fore.LIGHTYELLOW_EX}')
+
+while not user_discord_name == "Gizzy's":
+    os.system('cls')
+    print(f'{Fore.LIGHTRED_EX}Name Is Invalid, Please try again!')
+    print("")
+    user_discord_name = input(f'\r{Fore.RESET}Enter discord name bot {Fore.LIGHTBLUE_EX}>> {Fore.LIGHTYELLOW_EX}')
+
+print("")
 print('\rReading Token ...')
 time.sleep(1.5)
-TOKEN = TOKEN_USER # Token for discord_bot
-print(f'\rTOKEN : {TOKEN}')
+TOKEN = "" # Token for discord_bot
+print("")
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... /')
+time.sleep(0.9)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... -')
+time.sleep(0.4)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... |')
+time.sleep(0.2)
+os.system('cls')
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... \\')
+time.sleep(0.9)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... /')
+time.sleep(0.4)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... -')
+time.sleep(0.2)
+os.system('cls')
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... \\')
+time.sleep(0.9)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... /')
+time.sleep(0.4)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... -')
+time.sleep(0.2)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... \\')
+time.sleep(1.4)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... |')
+time.sleep(0.2)
+os.system('cls')
+print(Fore.LIGHTGREEN_EX + 'Verification token ... -')
+time.sleep(0.2)
+os.system('cls')
+time.sleep(3)
+if TOKEN == '':
+    print("")
+    print(Fore.LIGHTRED_EX + '❌ Verification Is Failed')
+    print("")
+    TOKEN = input(f'{Fore.YELLOW}Enter your token {Fore.GREEN}>> {Fore.LIGHTMAGENTA_EX}')
 
-time.sleep(1.0)
+if not TOKEN == 'OTMwMDc3ODY3NjU0NjcyNDA0.Ydwogw.BP3YgndU4qcpnofDXOxgL_UhEB0':
+    print("")
+    print(Fore.LIGHTRED_EX + 'TOKEN IS INVALID, PLEASE ENTER YOUR TOKEN IN >>>>>>>>>>>>>>> [ TOKEN = "" # Token for discord_bot! ]')
+    print("")
+    print(f'                                     {Fore.LIGHTBLUE_EX}Detected By :{Fore.LIGHTWHITE_EX} Giuseppe{Fore.LIGHTRED_EX} | ERROR:   ⬆️ {Fore.LIGHTWHITE_EX} Missing on line 37!')
+    print("")
+    print(Fore.WHITE + "Press any key to exit...")
+    print(Fore.WHITE)
+    junk = getch() # Assign to a variable just to suppress output. Blocks until key press.
+    sys.exit()
+
+print("")
+print(f'\r{Fore.WHITE}TOKEN : {TOKEN}')
+print("")
+print(Fore.LIGHTGREEN_EX + 'Verification Is Success ✔')
+
+time.sleep(1.5)
 
 os.system('cls')
 print('Connecting to discord server! ...')
 time.sleep(3)
 os.system('cls')
-print("Connecting   ")
+print(Fore.LIGHTBLUE_EX)
+print("Connecting 35%")
 time.sleep(1) #do some work here...
 os.system('cls')
-print("Connecting.  ")
+print("Connecting 79%")
 time.sleep(0.4) #do some more work here...
 os.system('cls')
-print("Connecting.. ")
+print("Connecting 91%")
 time.sleep(1) #do even more work...
 os.system('cls')
 
-print("Connecting...")
+print("Connecting 100%")
 time.sleep(4) #gratuitious amounts of work...
 os.system('cls')
+
+print(Fore.LIGHTWHITE_EX)
 
 bot = commands.Bot(command_prefix=".")
 
@@ -98,12 +181,15 @@ async def on_message(message):
       await message.delete()
       embed=discord.Embed(title=f"⚠️WARNING⚠️", description=f"{message.author} Do not say that words!", color=0xe74c3c)
       embed.set_footer(text=f"Detected by Gizzy#0857 Bot (G)")
-      print(f"Gizz's Bot has detected bad words from {message.author} (Message Has Deleted)")
+      print(f"Gizzy's Bot has detected bad words from {message.author} (Message Has Deleted)")
       await message.channel.send(embed=embed)
     else:
       await bot.process_commands(message)
 
     if message.content == 'hello':
+        await message.channel.send(f'Hi! {message.author}')
+        print(f"\rBot :: Hi! {message.author}")
+    if message.content == 'Hello':
         await message.channel.send(f'Hi! {message.author}')
         print(f"\rBot :: Hi! {message.author}")
     if message.content == 'bye':
@@ -115,10 +201,15 @@ async def on_message(message):
         print(f"Bot detected bad words from {message.author}!")
     if message.content == 'shutdown_bot':
         await message.channel.send(f'I am exiting (Bye!)')
-        await client.close()
         await bot.close()
         print('Bot is disconnected from the server!')
         os.system('cls')
+        print(Fore.WHITE + "Press any key to exit...")
+        print(Fore.WHITE)
+        junk = getch() # Assign to a variable just to suppress output. Blocks until key press.
+        os.system('cls')
+        sys.exit()
+
         # Get the size of the file
         size = os.stat("discord_bot.py").st_size
 
@@ -219,11 +310,11 @@ async def on_member_join(member):
             # looping when we already got what we wanted
             return
 
-@client.event
+@bot.event
 async def on_message_delete(message):
   if message.author.bot:
     return
-  await client.send_message(message.channel, "<@{}>'s message was deleted".format(message.author.id))
+  await bot.send_message(message.channel, "<@{}>'s message was deleted".format(message.author.id))
 
 @bot.event
 async def on_member_remove(member):
@@ -239,6 +330,7 @@ async def message_id(ctx):
     See Message ID In Server
     
     .message_id
+
     '''
     await ctx.send_message(message_id)
 
